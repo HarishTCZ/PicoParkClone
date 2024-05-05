@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://cx53s6jbu3xc1"]
+[gd_scene load_steps=30 format=3 uid="uid://cx53s6jbu3xc1"]
 
 [ext_resource type="Texture2D" uid="uid://ypor7p0yn76i" path="res://Sprites/Floor.png" id="1_2knli"]
 [ext_resource type="PackedScene" uid="uid://ca2u7m0mn6bqp" path="res://Scenes/game_manager.tscn" id="1_hycdv"]
@@ -19,6 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://dyj2b5tp557rb" path="res://Scenes/Danger_Sprite.tscn" id="18_k3idv"]
 [ext_resource type="PackedScene" uid="uid://bgcdhi4ooexqc" path="res://Scenes/CheckpointFlag.tscn" id="19_1paqy"]
 [ext_resource type="PackedScene" uid="uid://62kw3epodarm" path="res://Scenes/PressurePlateDoor.tscn" id="19_hw02o"]
+[ext_resource type="Texture2D" uid="uid://c6nnym1ew7dmp" path="res://Sprites/Cntrl Sneak Prompt.png" id="20_2l80j"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3lcwx"]
 load_path = "res://.godot/imported/Background.png-35d93eb57723ae0fb58ad0b59abe54b6.ctex"
@@ -278,5 +279,10 @@ pressureplate_door = NodePath("../PressurePlateDoor")
 position = Vector2(-2774, 360)
 scale = Vector2(2.64024, 3.20254)
 open_offset = Vector2(0, 500)
+
+[node name="CntrlSneakPrompt" type="Sprite2D" parent="."]
+position = Vector2(-92.0001, 333)
+scale = Vector2(2.53125, 2.53125)
+texture = ExtResource("20_2l80j")
 
 [connection signal="animation_finished" from="MovingDoor/AnimationPlayer" to="MovingDoor" method="_on_animation_player_animation_finished"]
