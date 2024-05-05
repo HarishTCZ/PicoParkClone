@@ -7,7 +7,7 @@
 [ext_resource type="Script" path="res://Script/game_manager.gd" id="5_vjwhv"]
 [ext_resource type="PackedScene" uid="uid://bhas7dtvsay6v" path="res://Scenes/Button.tscn" id="6_0t0la"]
 [ext_resource type="PackedScene" path="res://Scenes/button_pressed.tscn" id="6_0w538"]
-[ext_resource type="PackedScene" uid="uid://c114kie26at7l" path="res://Scenes/door.tscn" id="8_gt67r"]
+[ext_resource type="PackedScene" uid="uid://c114kie26at7l" path="res://Scenes/Door.tscn" id="8_gt67r"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3lcwx"]
 load_path = "res://.godot/imported/Background.png-35d93eb57723ae0fb58ad0b59abe54b6.ctex"

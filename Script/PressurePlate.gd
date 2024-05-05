@@ -5,13 +5,13 @@ extends Area2D
 
 var door_open = false
 
-func _on_body_entered(body):
+func _on_body_entered(_body):
 	if not door_open:
 		door_open = true
 		animated_sprite.play("Pressed")
 		pressureplate_door.open_door()
 
-func _on_body_exited(body):
+func _on_body_exited(_body):
 	if door_open:
 		door_open = false
 		animated_sprite.play("NotPressed")

@@ -1,24 +1,28 @@
 extends StaticBody2D
 
-var animation_player: AnimationPlayer
 var is_open = false
-var open_position: Vector2
+@export var text : String = "+ for Down, - for Up"
+@export var open_offset = Vector2(0, -100)  # Adjust the offset for opening the door
 var closed_position: Vector2
+var move_speed = 100  # Adjust the speed of the door movement
 
 func _ready():
-	animation_player = $AnimationPlayer
 	closed_position = position
+
+func _physics_process(delta):
+	if is_open:
+		if position.distance_to(closed_position + open_offset) > 0.1:  # Check if door is not fully open
+			position = position.move_toward(closed_position + open_offset, move_speed * delta)
+	else:
+		if position.distance_to(closed_position) > 0.1:  # Check if door is not fully closed
+			position = position.move_toward(closed_position, move_speed * delta)
 
 func open_door():
 	if not is_open:
 		is_open = true
-		open_position = position  # Store the current position when opening
-		animation_player.play("Open")
+		
 
 func close_door():
 	if is_open:
 		is_open = false
-		animation_player.stop()  # Stop any ongoing animation
-		animation_player.set("Close", 0)  # Set animation to close
-		animation_player.seek(0)  # Seek to the beginning of the animation
-		animation_player.play("Close")  # Play the close animation from the current position
+		

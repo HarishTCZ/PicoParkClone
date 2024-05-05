@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Script/CheckpointFlag.gd" id="1_3i8e1"]
 [ext_resource type="Texture2D" uid="uid://bh45hcssoyafg" path="res://Sprites/Checkpoint.png" id="1_hv8dd"]
-[ext_resource type="PackedScene" uid="uid://ckn2liqhx2x2h" path="res://Scenes/text_box.tscn" id="3_a8gcn"]
+[ext_resource type="PackedScene" uid="uid://ckn2liqhx2x2h" path="res://Scenes/TextBox.tscn" id="3_a8gcn"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_px0hi"]
 atlas = ExtResource("1_hv8dd")

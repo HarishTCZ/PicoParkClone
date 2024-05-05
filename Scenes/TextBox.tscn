@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://ckn2liqhx2x2h"]
 
-[ext_resource type="Script" path="res://Script/text_box.gd" id="1_1sew3"]
-[ext_resource type="Texture2D" uid="uid://bvecc6l2p347t" path="res://Sprites/Cloud1.png" id="1_j17ec"]
-[ext_resource type="FontFile" uid="uid://ck82rpg6pna6b" path="res://Font/PixelOperator/PixelOperatorSC-Bold.ttf" id="2_pfhqv"]
+[ext_resource type="Script" path="res://Script/text_box.gd" id="1_1othg"]
+[ext_resource type="Texture2D" uid="uid://bvecc6l2p347t" path="res://Sprites/Cloud1.png" id="2_i0ibb"]
+[ext_resource type="FontFile" uid="uid://ck82rpg6pna6b" path="res://Font/PixelOperator/PixelOperatorSC-Bold.ttf" id="3_o05t4"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -11,7 +11,7 @@ offset_left = 1.0
 offset_right = 82.0
 offset_bottom = 47.0
 pivot_offset = Vector2(-363, -67)
-script = ExtResource("1_1sew3")
+script = ExtResource("1_1othg")
 
 [node name="TextBox" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -26,7 +26,7 @@ pivot_offset = Vector2(0, -1)
 
 [node name="NinePatchRect" type="NinePatchRect" parent="TextBox"]
 layout_mode = 2
-texture = ExtResource("1_j17ec")
+texture = ExtResource("2_i0ibb")
 patch_margin_left = 16
 patch_margin_top = 16
 patch_margin_right = 16
@@ -42,7 +42,7 @@ theme_override_constants/margin_bottom = 4
 [node name="Label" type="RichTextLabel" parent="TextBox/MarginContainer"]
 layout_mode = 2
 theme_override_colors/default_color = Color(1, 0.521569, 0.301961, 1)
-theme_override_fonts/normal_font = ExtResource("2_pfhqv")
+theme_override_fonts/normal_font = ExtResource("3_o05t4")
 theme_override_font_sizes/normal_font_size = 32
 text = "Deez
 "

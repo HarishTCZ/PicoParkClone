@@ -2,13 +2,13 @@
 
 [ext_resource type="PackedScene" uid="uid://ca2u7m0mn6bqp" path="res://Scenes/game_manager.tscn" id="1_2edkd"]
 [ext_resource type="Texture2D" uid="uid://ypor7p0yn76i" path="res://Sprites/Floor.png" id="1_ehn1l"]
-[ext_resource type="PackedScene" uid="uid://c114kie26at7l" path="res://Scenes/door.tscn" id="3_ypo75"]
+[ext_resource type="PackedScene" uid="uid://c114kie26at7l" path="res://Scenes/Door.tscn" id="3_ypo75"]
 [ext_resource type="PackedScene" uid="uid://dccoq670fjfyt" path="res://Scenes/Main_Character.tscn" id="4_pxp8p"]
 [ext_resource type="Script" path="res://Script/game_manager.gd" id="5_je638"]
-[ext_resource type="PackedScene" uid="uid://wglpdui772md" path="res://Scenes/killzone.tscn" id="7_doxhn"]
+[ext_resource type="PackedScene" uid="uid://wglpdui772md" path="res://Scenes/Killzone.tscn" id="7_doxhn"]
 [ext_resource type="PackedScene" uid="uid://bama08mi4avx8" path="res://Scenes/PlatformFinal.tscn" id="7_nf5bn"]
 [ext_resource type="PackedScene" uid="uid://vu6nvk815vn7" path="res://Scenes/Coin.tscn" id="8_qcmct"]
-[ext_resource type="PackedScene" uid="uid://dwvpotm6shelv" path="res://Scenes/key.tscn" id="10_l3kcv"]
+[ext_resource type="PackedScene" uid="uid://dwvpotm6shelv" path="res://Scenes/Key.tscn" id="10_l3kcv"]
 [ext_resource type="PackedScene" uid="uid://25d0mg1aejpi" path="res://Scenes/SignBoard.tscn" id="11_2h6vw"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3lcwx"]

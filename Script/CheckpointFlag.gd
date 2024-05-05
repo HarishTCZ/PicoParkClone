@@ -6,7 +6,6 @@ func _ready():
 
 func _on_body_entered(_body):
 	control.visible = true
-	
 
 func _on_body_exited(_body):
 	control.visible = false

@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://dccoq670fjfyt"]
+[gd_scene load_steps=42 format=3 uid="uid://dccoq670fjfyt"]
 
 [ext_resource type="Texture2D" uid="uid://qgj8d5fgpo6p" path="res://Sprites/Pico Player Idle Final.png" id="1_dfw8o"]
 [ext_resource type="Texture2D" uid="uid://du0jsnporygqe" path="res://Sprites/Pico Player Death.png" id="1_rdqdu"]
@@ -13,6 +13,7 @@ class_name Character
 
 var SPEED = 300.0
 var JUMP_VELOCITY = -400.0
+var SNEAK = 100
 const pushforce = 50.0
 @onready var body = $Body
 var dead = false
@@ -40,9 +41,14 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed(\"jump\") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 		
-	if Input.is_action_just_pressed(\"long jump\") and is_on_floor():
-		velocity.y = -700
+	if Input.is_action_pressed(\"Sneak\") and is_on_floor():
+		SPEED = SNEAK
+		body.play(\"walk right\",0.5)
 	
+	if Input.is_action_just_released(\"Sneak\") and is_on_floor():
+		SPEED = 300
+		body.play(\"walk right\")
+		
 	if pushblock:
 		body.play(\"push\")
 
@@ -70,12 +76,39 @@ func death():
 	dead = true
 	SPEED = 0
 	JUMP_VELOCITY = 0
-
-
-	
-
-
 "
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ysqfa"]
+atlas = ExtResource("4_h6hep")
+region = Rect2(0, 0, 100, 132)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l4gep"]
+atlas = ExtResource("4_h6hep")
+region = Rect2(100, 0, 100, 132)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xyd2y"]
+atlas = ExtResource("4_h6hep")
+region = Rect2(200, 0, 100, 132)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6ki07"]
+atlas = ExtResource("4_h6hep")
+region = Rect2(300, 0, 100, 132)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6cf61"]
+atlas = ExtResource("4_h6hep")
+region = Rect2(400, 0, 100, 132)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m5l82"]
+atlas = ExtResource("4_h6hep")
+region = Rect2(500, 0, 100, 132)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m20cr"]
+atlas = ExtResource("4_h6hep")
+region = Rect2(600, 0, 100, 132)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w8nah"]
+atlas = ExtResource("4_h6hep")
+region = Rect2(700, 0, 100, 132)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7bikk"]
 atlas = ExtResource("1_rdqdu")
@@ -183,6 +216,35 @@ region = Rect2(700, 0, 100, 132)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_c7xm8"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ysqfa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l4gep")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xyd2y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6ki07")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6cf61")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m5l82")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m20cr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w8nah")
+}],
+"loop": true,
+"name": &"Sneak",
+"speed": 6.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_7bikk")
@@ -297,8 +359,9 @@ script = SubResource("GDScript_f7mo4")
 position = Vector2(32, 30.5)
 scale = Vector2(0.6455, 0.530769)
 sprite_frames = SubResource("SpriteFrames_c7xm8")
-animation = &"death"
+animation = &"Sneak"
 autoplay = "idle"
+frame_progress = 0.858385
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 polygon = PackedVector2Array(0, 37, 0, -1, 20, -1, 20, 6, 44, 6, 44, -1, 64, -1, 64, 37, 55, 53, 50, 63, 14, 63, 8, 53)
