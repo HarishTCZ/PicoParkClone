@@ -1,0 +1,46 @@
+[gd_scene load_steps=5 format=3 uid="uid://bhas7dtvsay6v"]
+
+[ext_resource type="Script" path="res://Script/Button.gd" id="1_1a21k"]
+[ext_resource type="Texture2D" uid="uid://detcpp4dp4rnc" path="res://Sprites/Button.png" id="2_53lyp"]
+[ext_resource type="Texture2D" uid="uid://b7nke65spkf2l" path="res://Sprites/Button Pressed.png" id="3_qlpat"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mk07w"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_53lyp")
+}],
+"loop": false,
+"name": &"NotPressed",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_qlpat")
+}],
+"loop": true,
+"name": &"Pressed",
+"speed": 5.0
+}]
+
+[node name="Button" type="Area2D"]
+scale = Vector2(0.73, 0.843)
+collision_layer = 4
+collision_mask = 10
+script = ExtResource("1_1a21k")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_mk07w")
+animation = &"NotPressed"
+autoplay = "NotPressed"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-32, 16, -32, 9, -28, 9, -28, -13, 28, -13, 28, 9, 32, 9, 32, 16)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.2
+one_shot = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

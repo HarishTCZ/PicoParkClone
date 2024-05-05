@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=3 uid="uid://canjkrftgjtxy"]
+
+[ext_resource type="Script" path="res://Script/RigidBox.gd" id="1_poyrn"]
+[ext_resource type="Texture2D" uid="uid://cwhdfiyh4jaoa" path="res://Sprites/RigidBox.png" id="1_w0v7e"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_slv1h"]
+size = Vector2(61.3787, 63)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pva6r"]
+size = Vector2(70.8215, 51)
+
+[node name="RigidBox" type="RigidBody2D"]
+position = Vector2(24, 24)
+scale = Vector2(1.059, 1)
+collision_layer = 2
+collision_mask = 11
+mass = 2.0
+angular_damp = 1.0
+script = ExtResource("1_poyrn")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(6.88574, 8)
+scale = Vector2(1.28691, 1.33333)
+texture = ExtResource("1_w0v7e")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(7.08215, 7.5)
+shape = SubResource("RectangleShape2D_slv1h")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+
+[node name="Zone" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(7.08216, 7.5)
+shape = SubResource("RectangleShape2D_pva6r")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

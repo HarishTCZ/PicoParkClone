@@ -1,0 +1,51 @@
+[gd_scene load_steps=6 format=3 uid="uid://b2ataywcuo3pk"]
+
+[ext_resource type="Script" path="res://Script/PressurePlate.gd" id="1_x85a0"]
+[ext_resource type="Texture2D" uid="uid://ofydgartx57y" path="res://Sprites/PressurePlateFinal.png" id="2_adebj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w73kq"]
+atlas = ExtResource("2_adebj")
+region = Rect2(0, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wriqi"]
+atlas = ExtResource("2_adebj")
+region = Rect2(64, 0, 64, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mk07w"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w73kq")
+}],
+"loop": true,
+"name": &"NotPressed",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wriqi")
+}],
+"loop": true,
+"name": &"Pressed",
+"speed": 5.0
+}]
+
+[node name="PressurePlate" type="Area2D"]
+position = Vector2(10, 5)
+collision_mask = 6
+script = ExtResource("1_x85a0")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-8.5, -5)
+scale = Vector2(0.734375, 0.8125)
+sprite_frames = SubResource("SpriteFrames_mk07w")
+animation = &"NotPressed"
+autoplay = "NotPressed"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(-7.47971, -4.35088)
+scale = Vector2(0.755717, 0.739277)
+polygon = PackedVector2Array(-32.4464, 16.7067, -32.4464, 8.59066, -28.4767, 8.59066, -28.4767, -14.4048, 25.7765, -14.4048, 25.7765, 8.59066, 29.7462, 8.59066, 29.7462, 16.7067)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

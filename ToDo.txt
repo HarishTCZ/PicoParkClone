@@ -1,0 +1,8 @@
+Crouch:
+	=> add crouch animation
+	
+Level Finished Scene
+Torch on head
+Red light Green Light
+Falling Platform
+Add Long Jump Prompt

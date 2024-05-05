@@ -1,0 +1,64 @@
+[gd_scene load_steps=9 format=3 uid="uid://bgcdhi4ooexqc"]
+
+[ext_resource type="Script" path="res://Script/CheckpointFlag.gd" id="1_3i8e1"]
+[ext_resource type="Texture2D" uid="uid://bh45hcssoyafg" path="res://Sprites/Checkpoint.png" id="1_hv8dd"]
+[ext_resource type="PackedScene" uid="uid://ckn2liqhx2x2h" path="res://Scenes/text_box.tscn" id="3_a8gcn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_px0hi"]
+atlas = ExtResource("1_hv8dd")
+region = Rect2(0, 0, 128, 144)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4hnih"]
+atlas = ExtResource("1_hv8dd")
+region = Rect2(128, 0, 128, 144)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f36tp"]
+atlas = ExtResource("1_hv8dd")
+region = Rect2(256, 0, 128, 144)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qu2w2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_px0hi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4hnih")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f36tp")
+}],
+"loop": true,
+"name": &"default",
+"speed": 4.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ny2lc"]
+size = Vector2(28, 80)
+
+[node name="CheckpointFlag" type="Area2D"]
+position = Vector2(32, 74)
+collision_layer = 4
+collision_mask = 2
+script = ExtResource("1_3i8e1")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(36, 24)
+scale = Vector2(0.5625, 0.555556)
+sprite_frames = SubResource("SpriteFrames_qu2w2")
+autoplay = "default"
+frame_progress = 0.599361
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(17, 24)
+shape = SubResource("RectangleShape2D_ny2lc")
+
+[node name="Control" parent="." instance=ExtResource("3_a8gcn")]
+offset_left = -19.0
+offset_top = -71.0
+offset_right = 62.0
+offset_bottom = -24.0
+labeltext = "Checkpoint Reached!"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

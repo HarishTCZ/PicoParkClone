@@ -1,0 +1,304 @@
+[gd_scene load_steps=34 format=3 uid="uid://dccoq670fjfyt"]
+
+[ext_resource type="Texture2D" uid="uid://qgj8d5fgpo6p" path="res://Sprites/Pico Player Idle Final.png" id="1_dfw8o"]
+[ext_resource type="Texture2D" uid="uid://du0jsnporygqe" path="res://Sprites/Pico Player Death.png" id="1_rdqdu"]
+[ext_resource type="Texture2D" uid="uid://cdegqydb6bq1m" path="res://Sprites/Pico Player Jump Final.png" id="2_d3drw"]
+[ext_resource type="Texture2D" uid="uid://iyykeejigm47" path="res://Sprites/Pico Player walk right final.png" id="4_h6hep"]
+[ext_resource type="Texture2D" uid="uid://divrjenmnsi7b" path="res://Sprites/pushwalk.png" id="4_t1hrp"]
+
+[sub_resource type="GDScript" id="GDScript_f7mo4"]
+script/source = "extends CharacterBody2D
+
+class_name Character
+
+var SPEED = 300.0
+var JUMP_VELOCITY = -400.0
+const pushforce = 50.0
+@onready var body = $Body
+var dead = false
+var pushblock = false
+
+# Get the gravity from the project settings to be synced with RigidBody nodes.
+var gravity = ProjectSettings.get_setting(\"physics/2d/default_gravity\")
+
+func _physics_process(delta):
+	#Animation
+	if (velocity.x< -1 || velocity.x > 1):
+		body.play(\"walk right\")
+	else:
+		body.play(\"idle\")
+	# Add the gravity.
+	if not is_on_floor():
+		velocity.y += gravity * delta
+		body.play(\"jumping\")
+	if dead:
+		body.play(\"death\")
+		
+		
+
+	# Handle jump.
+	if Input.is_action_just_pressed(\"jump\") and is_on_floor():
+		velocity.y = JUMP_VELOCITY
+		
+	if Input.is_action_just_pressed(\"long jump\") and is_on_floor():
+		velocity.y = -700
+	
+	if pushblock:
+		body.play(\"push\")
+
+	# Get the input direction and handle the movement/deceleration.
+	var direction = Input.get_axis(\"left\", \"right\")
+	
+	if direction < 0 :
+		body.flip_h = true
+	elif direction > 0:
+		body.flip_h = false
+		
+	if direction:
+		velocity.x = direction * SPEED
+	else:
+		velocity.x = move_toward(velocity.x, 0, SPEED)
+
+	move_and_slide()
+	
+	for i in get_slide_collision_count():
+		var c = get_slide_collision(i)
+		if c.get_collider() is RigidBody2D:
+			c.get_collider().apply_central_impulse(-c.get_normal() * pushforce)
+			
+func death():
+	dead = true
+	SPEED = 0
+	JUMP_VELOCITY = 0
+
+
+	
+
+
+"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7bikk"]
+atlas = ExtResource("1_rdqdu")
+region = Rect2(0, 0, 100, 124)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_whwlr"]
+atlas = ExtResource("1_dfw8o")
+region = Rect2(0, 0, 100, 130)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rtk0d"]
+atlas = ExtResource("1_dfw8o")
+region = Rect2(100, 0, 100, 130)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ovst4"]
+atlas = ExtResource("1_dfw8o")
+region = Rect2(200, 0, 100, 130)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kgtf1"]
+atlas = ExtResource("1_dfw8o")
+region = Rect2(300, 0, 100, 130)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_371py"]
+atlas = ExtResource("1_dfw8o")
+region = Rect2(400, 0, 100, 130)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_shkgq"]
+atlas = ExtResource("1_dfw8o")
+region = Rect2(500, 0, 100, 130)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rn4gw"]
+atlas = ExtResource("1_dfw8o")
+region = Rect2(600, 0, 100, 130)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h23ek"]
+atlas = ExtResource("1_dfw8o")
+region = Rect2(700, 0, 100, 130)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1rgly"]
+atlas = ExtResource("2_d3drw")
+region = Rect2(100, 0, 99, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m7wti"]
+atlas = ExtResource("4_t1hrp")
+region = Rect2(0, 0, 100, 124)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s28vg"]
+atlas = ExtResource("4_t1hrp")
+region = Rect2(100, 0, 100, 124)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l2pqc"]
+atlas = ExtResource("4_t1hrp")
+region = Rect2(200, 0, 100, 124)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o16y4"]
+atlas = ExtResource("4_t1hrp")
+region = Rect2(300, 0, 100, 124)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y6dwg"]
+atlas = ExtResource("4_t1hrp")
+region = Rect2(400, 0, 100, 124)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f5hhn"]
+atlas = ExtResource("4_t1hrp")
+region = Rect2(500, 0, 100, 124)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_prsm3"]
+atlas = ExtResource("4_t1hrp")
+region = Rect2(600, 0, 100, 124)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pgpf2"]
+atlas = ExtResource("4_t1hrp")
+region = Rect2(700, 0, 100, 124)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h5sxb"]
+atlas = ExtResource("4_h6hep")
+region = Rect2(0, 0, 100, 132)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5asgl"]
+atlas = ExtResource("4_h6hep")
+region = Rect2(100, 0, 100, 132)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5jcw8"]
+atlas = ExtResource("4_h6hep")
+region = Rect2(200, 0, 100, 132)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_phe42"]
+atlas = ExtResource("4_h6hep")
+region = Rect2(300, 0, 100, 132)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gaa6p"]
+atlas = ExtResource("4_h6hep")
+region = Rect2(400, 0, 100, 132)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tge5e"]
+atlas = ExtResource("4_h6hep")
+region = Rect2(500, 0, 100, 132)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7vjml"]
+atlas = ExtResource("4_h6hep")
+region = Rect2(600, 0, 100, 132)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_75udb"]
+atlas = ExtResource("4_h6hep")
+region = Rect2(700, 0, 100, 132)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_c7xm8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7bikk")
+}],
+"loop": true,
+"name": &"death",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_whwlr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rtk0d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ovst4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kgtf1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_371py")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_shkgq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rn4gw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h23ek")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 4.5
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1rgly")
+}],
+"loop": true,
+"name": &"jumping",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m7wti")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s28vg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l2pqc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o16y4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y6dwg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f5hhn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_prsm3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pgpf2")
+}],
+"loop": true,
+"name": &"push",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h5sxb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5asgl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5jcw8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_phe42")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gaa6p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tge5e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7vjml")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_75udb")
+}],
+"loop": true,
+"name": &"walk right",
+"speed": 10.0
+}]
+
+[node name="Character" type="CharacterBody2D" groups=["Player"]]
+position = Vector2(0, 1)
+collision_layer = 2
+collision_mask = 15
+script = SubResource("GDScript_f7mo4")
+
+[node name="Body" type="AnimatedSprite2D" parent="."]
+position = Vector2(32, 30.5)
+scale = Vector2(0.6455, 0.530769)
+sprite_frames = SubResource("SpriteFrames_c7xm8")
+animation = &"death"
+autoplay = "idle"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(0, 37, 0, -1, 20, -1, 20, 6, 44, 6, 44, -1, 64, -1, 64, 37, 55, 53, 50, 63, 14, 63, 8, 53)

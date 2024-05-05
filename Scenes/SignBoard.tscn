@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://25d0mg1aejpi"]
+
+[ext_resource type="PackedScene" uid="uid://du1crxgufaxba" path="res://Scenes/SignBoardClone.tscn" id="1_j81ow"]
+[ext_resource type="Script" path="res://Script/SignBoard.gd" id="2_y06w4"]
+[ext_resource type="PackedScene" uid="uid://ckn2liqhx2x2h" path="res://Scenes/text_box.tscn" id="3_mxp0a"]
+
+[node name="SignBoard" instance=ExtResource("1_j81ow")]
+script = ExtResource("2_y06w4")
+
+[node name="E" parent="." index="2"]
+position = Vector2(86, 0)
+
+[node name="Control" parent="." index="3" instance=ExtResource("3_mxp0a")]
+offset_left = -10.0
+offset_top = -72.0
+offset_right = 71.0
+offset_bottom = -25.0
+pivot_offset = Vector2(0, 0)
