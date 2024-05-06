@@ -2,3 +2,14 @@ Level Finished Scene
 Torch on head
 Red light Green Light
 Checkpoint
+Main Menu
+ 	=> Level Selector
+	=>Pause menu
+	
+Level Design:
+	=> 1 level with rigid box and falling box
+	=> 1 level with pressure plate door
+	=> 1 level with push or dont push button
+	=> coin collecting under a timer level
+	=> push button to increase timer level, speed run kinda shit
+	=> maths quiz using buttons level

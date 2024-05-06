@@ -4,7 +4,7 @@ var is_open = false
 @export var text : String = "+ for Down, - for Up"
 @export var open_offset = Vector2(0, -100)  # Adjust the offset for opening the door
 var closed_position: Vector2
-var move_speed = 100  # Adjust the speed of the door movement
+var move_speed = 200  # Adjust the speed of the door movement
 
 func _ready():
 	closed_position = position

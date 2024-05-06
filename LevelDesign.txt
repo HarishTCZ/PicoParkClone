@@ -1,0 +1,8 @@
+Player:
+	=> Player is 4 pixel square tall i.e 4x16 = 64 pixels
+	=> PLayer can jump upto 4 pixel boxes vertically
+	=> PLayer can jump 15 pixel boxes horizontally
+	
+Level:
+	=> Always put game manager scene and declare it as unique
+	=> Moving door also set to be unique
