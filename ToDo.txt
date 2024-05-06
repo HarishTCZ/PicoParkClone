@@ -4,8 +4,11 @@ Red light Green Light
 Checkpoint
 Main Menu
  	=> Level Selector
-	=>Pause menu
-	
+	=> Pause menu
+Shop and Player Custoumization:
+	=> cosmetics to buy	
+
+
 Level Design:
 	=> 1 level with rigid box and falling box
 	=> 1 level with pressure plate door
@@ -13,3 +16,7 @@ Level Design:
 	=> coin collecting under a timer level
 	=> push button to increase timer level, speed run kinda shit
 	=> maths quiz using buttons level
+
+
+are ya winning son player intro or intro main menu scene idea
+walter white jesse we need to cook, jeese science bitchhh intro scene
