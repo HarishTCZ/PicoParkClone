@@ -4,10 +4,11 @@ extends Area2D
 @onready var timer = $Timer
 @onready var character = %Character
 
-func _on_body_entered(_body):
-	print("You Ded")
-	character.death()
-	timer.start() #starts timer
+func _on_body_entered(body):
+	if body.is_in_group("Player"):
+		print("You Ded")
+		character.death()
+		timer.start() #starts timer
 	
 
 func _on_timer_timeout(): #when timer finishes

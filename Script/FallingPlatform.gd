@@ -9,7 +9,6 @@ var elapsed_time = 0
 const HIDE_AFTER_SECONDS = 2.0
 
 func _ready():
-	print("ready")
 	fall_timer = 0
 
 func _process(delta):
@@ -25,5 +24,4 @@ func _process(delta):
 			hide()
 
 func _on_area_2d_body_entered(_body):
-	print("fall")
 	activated = true

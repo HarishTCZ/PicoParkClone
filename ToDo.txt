@@ -2,9 +2,11 @@ Level Finished Scene
 Torch on head
 Red light Green Light
 Checkpoint
+
 Main Menu
  	=> Level Selector
 	=> Pause menu
+	
 Shop and Player Custoumization:
 	=> cosmetics to buy	
 
@@ -12,11 +14,17 @@ Shop and Player Custoumization:
 Level Design:
 	=> 1 level with rigid box and falling box
 	=> 1 level with pressure plate door
+		=> rigid box and pressure plate
+		=> 
 	=> 1 level with push or dont push button
-	=> coin collecting under a timer level
-	=> push button to increase timer level, speed run kinda shit
-	=> maths quiz using buttons level
+		=> do a puzzle at start which give what button to press and not to press, we have to rememeber the buttons
+		=> coin collecting under a timer level
+		=> push button to increase timer level, speed run kinda shit
+		=> maths quiz using buttons level
+		=> press specific button which is shown in a screen,if failed reset the level, like piano tiles
+		=>
 
 
 are ya winning son player intro or intro main menu scene idea
 walter white jesse we need to cook, jeese science bitchhh intro scene
+super Saiyan transformation animation

@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://b1pgpcwkw2vfq"]
+[gd_scene load_steps=5 format=3 uid="uid://b1pgpcwkw2vfq"]
 
 [ext_resource type="Script" path="res://Script/Control.gd" id="1_1aoyx"]
+[ext_resource type="Texture2D" uid="uid://bfjasbpdw1bni" path="res://Sprites/LevelMap/MainMenuButton.png" id="2_5ht2w"]
 [ext_resource type="FontFile" uid="uid://ck82rpg6pna6b" path="res://Font/PixelOperator/PixelOperatorSC-Bold.ttf" id="2_m010h"]
+[ext_resource type="Texture2D" uid="uid://2k6spjc2y23u" path="res://Sprites/LevelMap/MainMenuButton_Pressed.png" id="3_l0twj"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -14,26 +16,94 @@ script = ExtResource("1_1aoyx")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
-offset_right = 62.0
-offset_bottom = 80.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -3.0
+offset_top = 121.0
+offset_right = -3.0
+offset_bottom = 121.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 6
+alignment = 1
 
-[node name="Play" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="Play" type="TextureButton" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+focus_neighbor_top = NodePath("../Quit")
+focus_neighbor_bottom = NodePath("../Options")
+texture_normal = ExtResource("2_5ht2w")
+texture_hover = ExtResource("3_l0twj")
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Play"]
+layout_mode = 0
+offset_left = 39.0
+offset_top = 6.0
+offset_right = 167.0
+offset_bottom = 70.0
+theme_override_colors/font_color = Color(1, 0.521569, 0.301961, 1)
 theme_override_fonts/font = ExtResource("2_m010h")
+theme_override_font_sizes/font_size = 48
 text = "Play"
 
-[node name="Options" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="Options" type="TextureButton" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("2_m010h")
-text = "Options"
+focus_neighbor_top = NodePath("../Play")
+focus_neighbor_bottom = NodePath("../Quit")
+texture_normal = ExtResource("2_5ht2w")
+texture_hover = ExtResource("3_l0twj")
 
-[node name="Quit" type="Button" parent="MarginContainer/VBoxContainer"]
-layout_mode = 2
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Options"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 7.0
+offset_right = 169.0
+offset_bottom = 55.0
+theme_override_colors/font_color = Color(1, 0.521569, 0.301961, 1)
 theme_override_fonts/font = ExtResource("2_m010h")
+theme_override_font_sizes/font_size = 48
+text = "Options
+"
+
+[node name="Quit" type="TextureButton" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+focus_neighbor_top = NodePath("../Options")
+focus_neighbor_bottom = NodePath("../Play")
+texture_normal = ExtResource("2_5ht2w")
+texture_hover = ExtResource("3_l0twj")
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Quit"]
+layout_mode = 0
+offset_left = 38.0
+offset_top = 5.0
+offset_right = 158.0
+offset_bottom = 69.0
+theme_override_colors/font_color = Color(1, 0.521569, 0.301961, 1)
+theme_override_fonts/font = ExtResource("2_m010h")
+theme_override_font_sizes/font_size = 48
 text = "Quit"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.00347222
+anchor_top = -0.0493827
+anchor_right = 0.00347222
+anchor_bottom = -0.0493827
+offset_left = 369.0
+offset_top = 147.0
+offset_right = 777.0
+offset_bottom = 243.0
+theme_override_colors/font_color = Color(1, 0.521569, 0.301961, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_m010h")
+theme_override_font_sizes/font_size = 96
+text = "Deez Nutz"
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Options" to="." method="_on_options_pressed"]

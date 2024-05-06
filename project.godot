@@ -14,6 +14,10 @@ config/name="Pico Park Clone"
 run/main_scene="res://Levels/Level1.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 
+[autoload]
+
+GameManager="*res://Scenes/game_manager.tscn"
+
 [gui]
 
 fonts/dynamic_fonts/use_oversampling=false

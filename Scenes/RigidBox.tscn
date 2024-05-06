@@ -15,6 +15,7 @@ scale = Vector2(1.059, 1)
 collision_layer = 2
 collision_mask = 11
 mass = 2.0
+gravity_scale = 1.2
 angular_damp = 1.0
 script = ExtResource("1_poyrn")
 metadata/_edit_group_ = true

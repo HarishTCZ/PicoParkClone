@@ -8,7 +8,6 @@ func _integrate_forces(_state):
 
 
 func _on_area_2d_body_entered(_body:CharacterBody2D):
-	print("play")
 	character.pushblock = true
 
 

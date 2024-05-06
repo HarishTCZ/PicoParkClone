@@ -1,6 +1,7 @@
 extends StaticBody2D
 @onready var animation_player = $AnimationPlayer
 var playfinish = false
+
 func door():
 	animation_player.play("Door")	
 	if playfinish:

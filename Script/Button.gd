@@ -5,7 +5,6 @@ var press = false
 
 
 func _on_body_entered(_body):
-	print("yes")
 	animated_sprite.play("Pressed")
 	press = true
 
