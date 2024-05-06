@@ -44,67 +44,41 @@ limit_top = 0
 limit_right = 5090
 limit_bottom = 4850
 
-[node name="RigidBody2D" parent="." instance=ExtResource("3_7qwx8")]
-position = Vector2(557, 489)
-scale = Vector2(1.5, 1.416)
+[node name="FallingPlatform" type="Node" parent="."]
 
-[node name="RigidBody2D2" parent="." instance=ExtResource("3_7qwx8")]
-position = Vector2(2274, 380)
-scale = Vector2(1.5, 1.416)
-
-[node name="RigidBody2D3" parent="." instance=ExtResource("3_7qwx8")]
-position = Vector2(3492, 385)
-scale = Vector2(1.5, 1.416)
-
-[node name="Node" type="Node" parent="."]
-
-[node name="FallingPlatform6" parent="Node" instance=ExtResource("5_lg3bd")]
+[node name="FallingPlatform6" parent="FallingPlatform" instance=ExtResource("5_lg3bd")]
 position = Vector2(1768, 471)
 
-[node name="FallingPlatform7" parent="Node" instance=ExtResource("5_lg3bd")]
+[node name="FallingPlatform7" parent="FallingPlatform" instance=ExtResource("5_lg3bd")]
 position = Vector2(1816, 471)
 
-[node name="FallingPlatform8" parent="Node" instance=ExtResource("5_lg3bd")]
+[node name="FallingPlatform8" parent="FallingPlatform" instance=ExtResource("5_lg3bd")]
 position = Vector2(1864, 471)
 
-[node name="FallingPlatform9" parent="Node" instance=ExtResource("5_lg3bd")]
+[node name="FallingPlatform9" parent="FallingPlatform" instance=ExtResource("5_lg3bd")]
 position = Vector2(1912, 471)
 
-[node name="FallingPlatform10" parent="Node" instance=ExtResource("5_lg3bd")]
+[node name="FallingPlatform10" parent="FallingPlatform" instance=ExtResource("5_lg3bd")]
 position = Vector2(1960, 471)
 
-[node name="FallingPlatform" parent="Node" instance=ExtResource("5_lg3bd")]
+[node name="FallingPlatform" parent="FallingPlatform" instance=ExtResource("5_lg3bd")]
 position = Vector2(1480, 472)
 
-[node name="FallingPlatform2" parent="Node" instance=ExtResource("5_lg3bd")]
+[node name="FallingPlatform2" parent="FallingPlatform" instance=ExtResource("5_lg3bd")]
 position = Vector2(1528, 472)
 
-[node name="FallingPlatform3" parent="Node" instance=ExtResource("5_lg3bd")]
+[node name="FallingPlatform3" parent="FallingPlatform" instance=ExtResource("5_lg3bd")]
 position = Vector2(1576, 472)
 
-[node name="FallingPlatform4" parent="Node" instance=ExtResource("5_lg3bd")]
+[node name="FallingPlatform4" parent="FallingPlatform" instance=ExtResource("5_lg3bd")]
 position = Vector2(1624, 472)
 
-[node name="FallingPlatform5" parent="Node" instance=ExtResource("5_lg3bd")]
+[node name="FallingPlatform5" parent="FallingPlatform" instance=ExtResource("5_lg3bd")]
 position = Vector2(1672, 472)
-
-[node name="Killzone" parent="." instance=ExtResource("6_d8ijn")]
-position = Vector2(648, 829)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
-scale = Vector2(5, 5)
-shape = SubResource("SegmentShape2D_71dyv")
 
 [node name="SignBoard" parent="." instance=ExtResource("7_jh212")]
 position = Vector2(1303, 384)
 labelText = "These are Falling |Blocks, Run through Them"
-
-[node name="Killzone2" parent="." instance=ExtResource("6_d8ijn")]
-position = Vector2(1873, 613)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone2"]
-position = Vector2(-154, -46)
-shape = SubResource("RectangleShape2D_isn0b")
 
 [node name="PressurePlate" parent="." node_paths=PackedStringArray("pressureplate_door") instance=ExtResource("8_lvigl")]
 position = Vector2(3674, 440)
@@ -124,3 +98,34 @@ position = Vector2(1723, 370)
 
 [node name="GameManager" parent="." instance=ExtResource("12_0tsfl")]
 unique_name_in_owner = true
+
+[node name="RigidBox" type="Node" parent="."]
+
+[node name="RigidBody2D" parent="RigidBox" instance=ExtResource("3_7qwx8")]
+position = Vector2(557, 489)
+scale = Vector2(1.5, 1.416)
+
+[node name="RigidBody2D2" parent="RigidBox" instance=ExtResource("3_7qwx8")]
+position = Vector2(2274, 380)
+scale = Vector2(1.5, 1.416)
+
+[node name="RigidBody2D3" parent="RigidBox" instance=ExtResource("3_7qwx8")]
+position = Vector2(3492, 385)
+scale = Vector2(1.5, 1.416)
+
+[node name="KillZone" type="Node" parent="."]
+
+[node name="Killzone" parent="KillZone" instance=ExtResource("6_d8ijn")]
+position = Vector2(648, 829)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KillZone/Killzone"]
+position = Vector2(17, -105)
+scale = Vector2(5, 5)
+shape = SubResource("SegmentShape2D_71dyv")
+
+[node name="Killzone2" parent="KillZone" instance=ExtResource("6_d8ijn")]
+position = Vector2(1873, 613)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KillZone/Killzone2"]
+position = Vector2(-154, -46)
+shape = SubResource("RectangleShape2D_isn0b")
