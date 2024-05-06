@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://canjkrftgjtxy"]
 
 [ext_resource type="Script" path="res://Script/RigidBox.gd" id="1_poyrn"]
-[ext_resource type="Texture2D" uid="uid://cwhdfiyh4jaoa" path="res://Sprites/RigidBox.png" id="1_w0v7e"]
+[ext_resource type="Texture2D" uid="uid://cwhdfiyh4jaoa" path="res://Sprites/Items/RigidBox.png" id="1_w0v7e"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_slv1h"]
 size = Vector2(61.3787, 63)

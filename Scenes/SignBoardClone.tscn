@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://du1crxgufaxba"]
 
 [ext_resource type="Script" path="res://Script/SignBoardClone.gd" id="1_qi37i"]
-[ext_resource type="Texture2D" uid="uid://cs2xvtnghrb6d" path="res://Sprites/Sign Board.png" id="2_id6ma"]
-[ext_resource type="Texture2D" uid="uid://scgufb0pvnbf" path="res://Sprites/E.png" id="3_ldcev"]
+[ext_resource type="Texture2D" uid="uid://cs2xvtnghrb6d" path="res://Sprites/Items/Sign Board.png" id="2_id6ma"]
+[ext_resource type="Texture2D" uid="uid://scgufb0pvnbf" path="res://Sprites/Prompts/E.png" id="3_ldcev"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i12ap"]
 size = Vector2(38, 58)

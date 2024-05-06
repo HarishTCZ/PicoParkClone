@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dyj2b5tp557rb"]
 
-[ext_resource type="Texture2D" uid="uid://bbtscb8l6dtkg" path="res://Sprites/Danger.png" id="1_lvchu"]
+[ext_resource type="Texture2D" uid="uid://bbtscb8l6dtkg" path="res://Sprites/Prompts/Danger.png" id="1_lvchu"]
 
 [node name="Danger" type="Sprite2D"]
 texture_filter = 1

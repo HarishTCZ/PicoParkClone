@@ -1,7 +1,7 @@
 [gd_scene load_steps=14 format=3 uid="uid://bxwqlwr04fn6i"]
 
-[ext_resource type="Texture2D" uid="uid://ypor7p0yn76i" path="res://Sprites/Floor.png" id="2_dgsrc"]
-[ext_resource type="Texture2D" uid="uid://detcpp4dp4rnc" path="res://Sprites/Button.png" id="3_wgyeg"]
+[ext_resource type="Texture2D" uid="uid://ypor7p0yn76i" path="res://Sprites/LevelMap/Floor.png" id="2_dgsrc"]
+[ext_resource type="Texture2D" uid="uid://detcpp4dp4rnc" path="res://Sprites/Items/Button.png" id="3_wgyeg"]
 [ext_resource type="PackedScene" uid="uid://dccoq670fjfyt" path="res://Scenes/Main_Character.tscn" id="4_midt6"]
 [ext_resource type="PackedScene" path="res://Scenes/Coins.tscn" id="5_2wu2f"]
 [ext_resource type="Script" path="res://Script/game_manager.gd" id="5_vjwhv"]

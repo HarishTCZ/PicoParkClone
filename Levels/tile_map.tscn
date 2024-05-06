@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://b8arvqjm7fby8"]
+[gd_scene load_steps=10 format=3 uid="uid://b8arvqjm7fby8"]
 
-[ext_resource type="Texture2D" uid="uid://ypor7p0yn76i" path="res://Sprites/Floor.png" id="1_dx1c3"]
-[ext_resource type="Texture2D" uid="uid://pjkoeru3rk6j" path="res://Sprites/Spikes.png" id="2_j8r4s"]
-[ext_resource type="Texture2D" uid="uid://t1qnm543ts5g" path="res://Sprites/SpikeSmoll.png" id="3_eocqp"]
+[ext_resource type="Texture2D" uid="uid://ypor7p0yn76i" path="res://Sprites/LevelMap/Floor.png" id="1_dx1c3"]
+[ext_resource type="Texture2D" uid="uid://pjkoeru3rk6j" path="res://Sprites/LevelMap/Spikes.png" id="2_j8r4s"]
+[ext_resource type="Texture2D" uid="uid://5l4jx5vxikth" path="res://Sprites/LevelMap/SlopeUpDown.png" id="3_7b63s"]
+[ext_resource type="Texture2D" uid="uid://t1qnm543ts5g" path="res://Sprites/LevelMap/SpikeSmoll.png" id="3_eocqp"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qmsjg"]
 texture = ExtResource("1_dx1c3")
@@ -74,6 +75,17 @@ texture = ExtResource("2_j8r4s")
 1:1/0/physics_layer_0/angular_velocity = 0.0
 1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 1.625, -8, 4.625, -2.75, 8, 3.125, 8, 8, -8, 8)
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qg4af"]
+texture = ExtResource("3_7b63s")
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 6.98268, 6.89429, -8, 8, -8, 8, 8, -8, 8)
+1:0/0 = 0
+1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:0/0/physics_layer_0/angular_velocity = 0.0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, -7.07107, -8, 8, 7.07107, 8, 8, -8, 8)
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wixjv"]
 texture = ExtResource("3_eocqp")
 0:0/0 = 0
@@ -86,6 +98,7 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_qmsjg")
 sources/1 = SubResource("TileSetAtlasSource_vadw1")
 sources/3 = SubResource("TileSetAtlasSource_wixjv")
+sources/2 = SubResource("TileSetAtlasSource_qg4af")
 
 [node name="TileMap" type="TileMap"]
 position = Vector2(176, 464)

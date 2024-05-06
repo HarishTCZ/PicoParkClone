@@ -1,10 +1,9 @@
-[gd_scene load_steps=21 format=3 uid="uid://dkogljqg5gntg"]
+[gd_scene load_steps=20 format=3 uid="uid://dkogljqg5gntg"]
 
 [ext_resource type="PackedScene" uid="uid://ca2u7m0mn6bqp" path="res://Scenes/game_manager.tscn" id="1_2edkd"]
-[ext_resource type="Texture2D" uid="uid://ypor7p0yn76i" path="res://Sprites/Floor.png" id="1_ehn1l"]
+[ext_resource type="Texture2D" uid="uid://ypor7p0yn76i" path="res://Sprites/LevelMap/Floor.png" id="1_ehn1l"]
 [ext_resource type="PackedScene" uid="uid://c114kie26at7l" path="res://Scenes/Door.tscn" id="3_ypo75"]
 [ext_resource type="PackedScene" uid="uid://dccoq670fjfyt" path="res://Scenes/Main_Character.tscn" id="4_pxp8p"]
-[ext_resource type="Script" path="res://Script/game_manager.gd" id="5_je638"]
 [ext_resource type="PackedScene" uid="uid://wglpdui772md" path="res://Scenes/Killzone.tscn" id="7_doxhn"]
 [ext_resource type="PackedScene" uid="uid://bama08mi4avx8" path="res://Scenes/PlatformFinal.tscn" id="7_nf5bn"]
 [ext_resource type="PackedScene" uid="uid://vu6nvk815vn7" path="res://Scenes/Coin.tscn" id="8_qcmct"]
@@ -192,10 +191,6 @@ position = Vector2(144, 288)
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Character"]
 remote_path = NodePath("../../Camera2D")
-
-[node name="Game Manager" type="Node" parent="."]
-unique_name_in_owner = true
-script = ExtResource("5_je638")
 
 [node name="Platforms" type="Node" parent="."]
 

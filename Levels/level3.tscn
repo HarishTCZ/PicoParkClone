@@ -1,7 +1,7 @@
 [gd_scene load_steps=15 format=3 uid="uid://bgm2n55h8nnd"]
 
 [ext_resource type="PackedScene" uid="uid://b8arvqjm7fby8" path="res://Levels/tile_map.tscn" id="1_b5dyy"]
-[ext_resource type="Texture2D" uid="uid://dh1kl2k5t57ij" path="res://Sprites/Background.png" id="1_kscy2"]
+[ext_resource type="Texture2D" uid="uid://dh1kl2k5t57ij" path="res://Sprites/LevelMap/Background.png" id="1_kscy2"]
 [ext_resource type="PackedScene" uid="uid://dccoq670fjfyt" path="res://Scenes/Main_Character.tscn" id="2_am08q"]
 [ext_resource type="PackedScene" uid="uid://canjkrftgjtxy" path="res://Scenes/RigidBox.tscn" id="3_7qwx8"]
 [ext_resource type="PackedScene" uid="uid://erytnawlqpn6" path="res://Scenes/FallingPlatform.tscn" id="5_lg3bd"]
@@ -42,7 +42,7 @@ position = Vector2(110, 169)
 limit_left = 0
 limit_top = 0
 limit_right = 5090
-limit_bottom = 4850
+limit_bottom = 735
 
 [node name="FallingPlatform" type="Node" parent="."]
 

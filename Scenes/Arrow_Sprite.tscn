@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://c8ucnpkv018bh"]
 
-[ext_resource type="Texture2D" uid="uid://hxtchlrd3isu" path="res://Sprites/Arrow.png" id="1_d2hcf"]
+[ext_resource type="Texture2D" uid="uid://hxtchlrd3isu" path="res://Sprites/Prompts/Arrow.png" id="1_d2hcf"]
 
 [node name="Arrow" type="Sprite2D"]
 position = Vector2(48, 32.75)

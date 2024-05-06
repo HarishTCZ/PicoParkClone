@@ -6,3 +6,6 @@ Player:
 Level:
 	=> Always put game manager scene and declare it as unique
 	=> Moving door also set to be unique
+	=> Player also always set to be unique
+	=> The height of the top and floor is 32 pixel blocks i.e. 545 pixels
+	=> the height of the floor is 10 pixel blocks

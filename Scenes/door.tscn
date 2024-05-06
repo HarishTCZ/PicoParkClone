@@ -1,14 +1,14 @@
 [gd_scene load_steps=7 format=3 uid="uid://c114kie26at7l"]
 
 [ext_resource type="Script" path="res://Script/door.gd" id="1_xvlq7"]
-[ext_resource type="Texture2D" uid="uid://c6lm06ple65hs" path="res://Sprites/Door.png" id="2_dqevp"]
+[ext_resource type="Texture2D" uid="uid://c6lm06ple65hs" path="res://Sprites/Items/Door.png" id="2_vle0f"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jox16"]
-atlas = ExtResource("2_dqevp")
+atlas = ExtResource("2_vle0f")
 region = Rect2(0, 0, 160, 155)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8jjkl"]
-atlas = ExtResource("2_dqevp")
+atlas = ExtResource("2_vle0f")
 region = Rect2(160, 0, 160, 155)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_gnlt6"]

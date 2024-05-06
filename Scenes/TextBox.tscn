@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://ckn2liqhx2x2h"]
 
 [ext_resource type="Script" path="res://Script/text_box.gd" id="1_1othg"]
-[ext_resource type="Texture2D" uid="uid://bvecc6l2p347t" path="res://Sprites/Cloud1.png" id="2_i0ibb"]
+[ext_resource type="Texture2D" uid="uid://bvecc6l2p347t" path="res://Sprites/Items/Cloud1.png" id="2_i0ibb"]
 [ext_resource type="FontFile" uid="uid://ck82rpg6pna6b" path="res://Font/PixelOperator/PixelOperatorSC-Bold.ttf" id="3_o05t4"]
 
 [node name="Control" type="Control"]

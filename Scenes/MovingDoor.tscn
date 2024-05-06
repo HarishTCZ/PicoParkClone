@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bopnba6repsg0"]
 
 [ext_resource type="Script" path="res://Script/MovingDoor.gd" id="1_ik2u7"]
-[ext_resource type="Texture2D" uid="uid://nantpwr3yqbf" path="res://Sprites/Door_Button.png" id="2_esult"]
+[ext_resource type="Texture2D" uid="uid://nantpwr3yqbf" path="res://Sprites/LevelMap/Door_Button.png" id="2_esult"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yiux0"]
 size = Vector2(32, 96)

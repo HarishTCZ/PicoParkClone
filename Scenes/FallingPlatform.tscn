@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://erytnawlqpn6"]
 
 [ext_resource type="Script" path="res://Script/FallingPlatform.gd" id="1_rbq8c"]
-[ext_resource type="Texture2D" uid="uid://co0bnm7i74q2r" path="res://Sprites/FallingPlatform.png" id="2_e43it"]
+[ext_resource type="Texture2D" uid="uid://co0bnm7i74q2r" path="res://Sprites/Items/FallingPlatform.png" id="2_e43it"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_slg2t"]
 size = Vector2(48, 48)
