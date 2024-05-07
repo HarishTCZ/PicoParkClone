@@ -5,6 +5,13 @@ Checkpoint
 Coloured blocks for coloured players
 Hidden Passages
 Breakable barrels(key and coins inside them)
+retry prompt(add cod quotes or motivational quotes)
+players playing mini game(sleeping with zzzz,listening to music,)
+jump pad and upside down spikes
+weight pad
+size change when button
+
+Change the rigid box to push when more than one
 
 Main Menu
  	=> Level Selector
@@ -14,7 +21,7 @@ Shop and Player Custoumization:
 	=> cosmetics to buy	
 
 
-Level Design:
+Level Design: (1 mini games level, 1 coin collect level, 1 normal level, )
 	=> 1 level with rigid box and falling box
 	=> 1 level with pressure plate door
 		=> rigid box and pressure plate
@@ -25,7 +32,7 @@ Level Design:
 		=> push button to increase timer level, speed run kinda shit
 		=> maths quiz using buttons level
 		=> press specific button which is shown in a screen,if failed reset the level, like piano tiles
-		=>dsfs
+		=>
 
 
 are ya winning son player intro or intro main menu scene idea
