@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://b1pgpcwkw2vfq"]
+[gd_scene load_steps=6 format=3 uid="uid://b1pgpcwkw2vfq"]
 
 [ext_resource type="Script" path="res://Script/Control.gd" id="1_1aoyx"]
 [ext_resource type="Texture2D" uid="uid://bfjasbpdw1bni" path="res://Sprites/LevelMap/MainMenuButton.png" id="2_5ht2w"]
 [ext_resource type="FontFile" uid="uid://ck82rpg6pna6b" path="res://Font/PixelOperator/PixelOperatorSC-Bold.ttf" id="2_m010h"]
+[ext_resource type="Texture2D" uid="uid://dxuq1kk367f6t" path="res://Sprites/MainMenuBackground.png" id="2_vw13o"]
 [ext_resource type="Texture2D" uid="uid://2k6spjc2y23u" path="res://Sprites/LevelMap/MainMenuButton_Pressed.png" id="3_l0twj"]
 
 [node name="Control" type="Control"]
@@ -10,19 +11,33 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 6.0
+offset_top = -3.0
+offset_right = 6.0
+offset_bottom = -3.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_1aoyx")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 2
+offset_left = -5.0
+offset_top = 2.0
+offset_right = 1147.0
+offset_bottom = 650.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_vw13o")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -3.0
-offset_top = 121.0
-offset_right = -3.0
-offset_bottom = 121.0
+offset_left = -16.0
+offset_top = 23.0
+offset_right = -16.0
+offset_bottom = 23.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -95,10 +110,10 @@ anchor_left = 0.00347222
 anchor_top = -0.0493827
 anchor_right = 0.00347222
 anchor_bottom = -0.0493827
-offset_left = 369.0
-offset_top = 147.0
-offset_right = 777.0
-offset_bottom = 243.0
+offset_left = 360.0
+offset_top = 158.0
+offset_right = 768.0
+offset_bottom = 254.0
 theme_override_colors/font_color = Color(1, 0.521569, 0.301961, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_m010h")

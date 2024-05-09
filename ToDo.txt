@@ -22,6 +22,7 @@ Shop and Player Custoumization:
 
 
 Level Design: (1 mini games level, 1 coin collect level, 1 normal level, )
+	=> make level one very basic with a sign that tell to jump off then restart with the sign pranking the player (add death count to 1 and use if to detect and change the sign)
 	=> 1 level with rigid box and falling box
 	=> 1 level with pressure plate door
 		=> rigid box and pressure plate

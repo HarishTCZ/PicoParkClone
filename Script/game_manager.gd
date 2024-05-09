@@ -11,4 +11,3 @@ func add_point():
 func add_key():
 	key +=1
 	
-	

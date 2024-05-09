@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://cx53s6jbu3xc1"]
+[gd_scene load_steps=28 format=3 uid="uid://cx53s6jbu3xc1"]
 
 [ext_resource type="Texture2D" uid="uid://ypor7p0yn76i" path="res://Sprites/LevelMap/Floor.png" id="1_2knli"]
 [ext_resource type="PackedScene" uid="uid://ca2u7m0mn6bqp" path="res://Scenes/game_manager.tscn" id="1_hycdv"]
@@ -18,9 +18,6 @@
 [ext_resource type="PackedScene" uid="uid://dyj2b5tp557rb" path="res://Scenes/Danger_Sprite.tscn" id="18_k3idv"]
 [ext_resource type="PackedScene" uid="uid://bgcdhi4ooexqc" path="res://Scenes/CheckpointFlag.tscn" id="19_1paqy"]
 [ext_resource type="Texture2D" uid="uid://c6nnym1ew7dmp" path="res://Sprites/Prompts/Cntrl Sneak Prompt.png" id="20_2l80j"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3lcwx"]
-load_path = "res://.godot/imported/Background.png-35d93eb57723ae0fb58ad0b59abe54b6.ctex"
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qmsjg"]
 texture = ExtResource("1_2knli")
@@ -155,7 +152,7 @@ position = Vector2(3242, 0)
 [node name="GameManager" parent="." instance=ExtResource("1_hycdv")]
 unique_name_in_owner = true
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="TextureRect" type="ColorRect" parent="."]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -166,7 +163,6 @@ offset_bottom = 748.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(1.7661, 0.940139)
-texture = SubResource("CompressedTexture2D_3lcwx")
 metadata/_edit_lock_ = true
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -258,11 +254,11 @@ labelText = "Press E to Interact|With Door and Items "
 
 [node name="SignBoard" parent="SignBoards" instance=ExtResource("16_hq48m")]
 position = Vector2(4974, 512)
-labelText = "Press the Fucking Button"
+labelText = "Press the Button"
 
 [node name="SignBoard3" parent="SignBoards" instance=ExtResource("16_hq48m")]
 position = Vector2(5987, 512)
-labelText = "Press E to| Enter Idiots"
+labelText = "Press E to| Enter "
 
 [node name="RigidBoxes" type="Node" parent="."]
 

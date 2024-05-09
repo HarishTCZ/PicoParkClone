@@ -48,7 +48,7 @@ func _physics_process(delta):
 	if Input.is_action_just_released(\"Sneak\") and is_on_floor():
 		SPEED = 300
 		body.play(\"walk right\")
-		
+	
 	if pushblock:
 		body.play(\"push\")
 

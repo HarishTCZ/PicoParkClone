@@ -179,7 +179,7 @@ moving_door = NodePath("../MovingDoor")
 unique_name_in_owner = true
 position = Vector2(2681, 394)
 rotation = 1.57079
-scale = Vector2(1, 5.43996)
+scale = Vector2(1, 5.91995)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Platforms/MovingDoor"]
 libraries = {

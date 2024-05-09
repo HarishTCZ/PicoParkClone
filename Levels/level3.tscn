@@ -88,9 +88,9 @@ position = Vector2(3674, 440)
 pressureplate_door = NodePath("../PressurePlateDoor")
 
 [node name="PressurePlateDoor" parent="." instance=ExtResource("9_lro1a")]
-position = Vector2(3160, 496)
+position = Vector2(3151, 496)
 rotation = -1.5708
-scale = Vector2(4, 9.99999)
+scale = Vector2(4, 10.96)
 open_offset = Vector2(680, 0)
 
 [node name="Door" parent="." instance=ExtResource("10_0adtw")]
@@ -129,3 +129,7 @@ position = Vector2(1873, 613)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="KillZone/Killzone2"]
 position = Vector2(-154, -46)
 shape = SubResource("RectangleShape2D_isn0b")
+
+[node name="SignBoard2" parent="." instance=ExtResource("7_jh212")]
+position = Vector2(339, 512)
+labelText = "You can Push|Blocks Around"
