@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://dkogljqg5gntg"]
+[gd_scene load_steps=19 format=3 uid="uid://dkogljqg5gntg"]
 
 [ext_resource type="PackedScene" uid="uid://ca2u7m0mn6bqp" path="res://Scenes/game_manager.tscn" id="1_2edkd"]
 [ext_resource type="Texture2D" uid="uid://ypor7p0yn76i" path="res://Sprites/LevelMap/Floor.png" id="1_ehn1l"]
@@ -9,9 +9,6 @@
 [ext_resource type="PackedScene" uid="uid://vu6nvk815vn7" path="res://Scenes/Coin.tscn" id="8_qcmct"]
 [ext_resource type="PackedScene" uid="uid://dwvpotm6shelv" path="res://Scenes/Key.tscn" id="10_l3kcv"]
 [ext_resource type="PackedScene" uid="uid://25d0mg1aejpi" path="res://Scenes/SignBoard.tscn" id="11_2h6vw"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3lcwx"]
-load_path = "res://.godot/imported/Background.png-35d93eb57723ae0fb58ad0b59abe54b6.ctex"
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qmsjg"]
 texture = ExtResource("1_ehn1l")
@@ -153,7 +150,7 @@ b = Vector2(1234, 0.0563049)
 [node name="GameManager" parent="." instance=ExtResource("1_2edkd")]
 unique_name_in_owner = true
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="TextureRect" type="ColorRect" parent="."]
 texture_filter = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -162,7 +159,6 @@ offset_right = 3563.0
 offset_bottom = 720.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = SubResource("CompressedTexture2D_3lcwx")
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(176, 464)
@@ -245,8 +241,8 @@ position = Vector2(475, 527)
 
 [node name="SignBoard" parent="." instance=ExtResource("11_2h6vw")]
 position = Vector2(303, 512)
-labelText = "Dont Fucking |Die"
+labelText = "Dont Die"
 
 [node name="SignBoard2" parent="." instance=ExtResource("11_2h6vw")]
 position = Vector2(1376, 512)
-labelText = "Wait for the Fucking|Platform "
+labelText = "Wait for the|Platform "

@@ -1,7 +1,6 @@
-[gd_scene load_steps=14 format=3 uid="uid://clnox5b7d4fbe"]
+[gd_scene load_steps=13 format=3 uid="uid://clnox5b7d4fbe"]
 
 [ext_resource type="PackedScene" uid="uid://ca2u7m0mn6bqp" path="res://Scenes/game_manager.tscn" id="1_2dafm"]
-[ext_resource type="Texture2D" uid="uid://dh1kl2k5t57ij" path="res://Sprites/LevelMap/Background.png" id="2_t62k2"]
 [ext_resource type="PackedScene" uid="uid://dccoq670fjfyt" path="res://Scenes/Main_Character.tscn" id="3_mce6a"]
 [ext_resource type="PackedScene" uid="uid://b8arvqjm7fby8" path="res://Levels/tile_map.tscn" id="4_73fbs"]
 [ext_resource type="PackedScene" uid="uid://canjkrftgjtxy" path="res://Scenes/RigidBox.tscn" id="6_q6aoo"]
@@ -18,10 +17,9 @@ size = Vector2(1468, 20)
 
 [node name="Level5" type="Node2D"]
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="TextureRect" type="ColorRect" parent="."]
 offset_right = 3662.0
 offset_bottom = 720.0
-texture = ExtResource("2_t62k2")
 metadata/_edit_lock_ = true
 
 [node name="TileMap" parent="." instance=ExtResource("4_73fbs")]

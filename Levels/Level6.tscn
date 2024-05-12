@@ -1,6 +1,5 @@
-[gd_scene load_steps=11 format=3 uid="uid://02wu6pt5j7x3"]
+[gd_scene load_steps=10 format=3 uid="uid://02wu6pt5j7x3"]
 
-[ext_resource type="Texture2D" uid="uid://dh1kl2k5t57ij" path="res://Sprites/LevelMap/Background.png" id="1_w80dd"]
 [ext_resource type="PackedScene" uid="uid://b8arvqjm7fby8" path="res://Levels/tile_map.tscn" id="2_corw3"]
 [ext_resource type="PackedScene" uid="uid://ca2u7m0mn6bqp" path="res://Scenes/game_manager.tscn" id="3_tq67c"]
 [ext_resource type="PackedScene" uid="uid://dccoq670fjfyt" path="res://Scenes/Main_Character.tscn" id="4_3s4vf"]
@@ -15,10 +14,9 @@ size = Vector2(3910, 20)
 
 [node name="Level6" type="Node2D"]
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="TextureRect" type="ColorRect" parent="."]
 offset_right = 4822.0
 offset_bottom = 729.0
-texture = ExtResource("1_w80dd")
 metadata/_edit_lock_ = true
 
 [node name="TileMap" parent="." instance=ExtResource("2_corw3")]
@@ -50,6 +48,7 @@ position = Vector2(1545, 485)
 position = Vector2(111, 396)
 limit_left = 0
 limit_top = 0
+limit_right = 5860
 limit_bottom = 717
 
 [node name="Killzone" parent="." instance=ExtResource("8_1di3d")]
