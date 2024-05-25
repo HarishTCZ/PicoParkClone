@@ -10,7 +10,7 @@ Just an Rip off of the famous puzzle oriented Multiplayer Co-op game "Pico Park"
 - Godot Game Engine
 - Aseprite
 - Visual Studio Code
-<br>
+
 
 # Gameplay
 ![Screenshot 2024-05-12 221610](https://github.com/HarishTCZ/Pico-Park-Clone/assets/160157122/b1f02342-b5e4-4c5d-bb47-61ce6dbbab18)
