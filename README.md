@@ -18,7 +18,8 @@ Just an Rip off of the famous puzzle oriented Multiplayer Co-op game "Pico Park"
 
 # Credits
 The Theme and Idea is totally based of "Pico Park".<br>
-All the Art and Sound Tracks are designed by me. <br>
+Assets and Sound Tracks are designed by me. <br>
 Feel Free to give a try and Judge the heck out of me: [Pico Park Clone](https://github.com/HarishTCZ/Pico-Park-Clone/blob/main/PicoPark.zip)
 <br>
+Every Assests and Codes are available and can be modified for personal or commercial projects. <br>
 #### Cheers!
