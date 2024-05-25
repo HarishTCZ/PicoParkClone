@@ -76,6 +76,7 @@ func death():
 	dead = true
 	SPEED = 0
 	JUMP_VELOCITY = 0
+	
 "
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ysqfa"]

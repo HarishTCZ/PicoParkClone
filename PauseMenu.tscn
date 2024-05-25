@@ -5,6 +5,7 @@
 [ext_resource type="FontFile" uid="uid://ck82rpg6pna6b" path="res://Font/PixelOperator/PixelOperatorSC-Bold.ttf" id="3_v4d52"]
 
 [node name="PauseMenu" type="Control"]
+process_mode = 2
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

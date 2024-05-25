@@ -126,3 +126,7 @@ position = Vector2(3470, 561)
 [node name="SignBoard" parent="." instance=ExtResource("12_tp86e")]
 position = Vector2(534, 495)
 labelText = "Take Your Time|To Figure Out"
+
+[node name="SignBoard2" parent="." instance=ExtResource("12_tp86e")]
+position = Vector2(1606, 495)
+labelText = "You can Press | R to Restart"

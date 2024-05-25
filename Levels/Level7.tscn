@@ -55,10 +55,10 @@ _data = {
 size = Vector2(3157, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xha6c"]
-size = Vector2(226, 20)
+size = Vector2(226, 29)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v5rel"]
-size = Vector2(80, 20)
+size = Vector2(80, 23)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vwwiw"]
 size = Vector2(288, 33)
@@ -128,21 +128,21 @@ shape = SubResource("RectangleShape2D_xha6c")
 position = Vector2(844, 705)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone3"]
-position = Vector2(720, 0)
+position = Vector2(720, -4.5)
 shape = SubResource("RectangleShape2D_xha6c")
 
 [node name="Killzone4" parent="." instance=ExtResource("8_hilip")]
 position = Vector2(1967, 554)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone4"]
-position = Vector2(-29, 8)
+position = Vector2(-29, 7)
 shape = SubResource("RectangleShape2D_v5rel")
 
 [node name="Killzone5" parent="." instance=ExtResource("8_hilip")]
 position = Vector2(1967, 554)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone5"]
-position = Vector2(195, 8)
+position = Vector2(195, 7.5)
 shape = SubResource("RectangleShape2D_v5rel")
 
 [node name="Killzone6" parent="." instance=ExtResource("8_hilip")]
