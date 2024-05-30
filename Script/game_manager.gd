@@ -12,11 +12,9 @@ func add_point():
 func add_key():
 	key +=1
 	
-func _input(event):
+func _process(delta):
 	if Input.is_action_just_pressed("restart"):
 		get_tree().reload_current_scene()
 	
-	if Input.is_action_just_pressed("pause"):
-		var current_value : bool = get_tree().paused
-		get_tree().paused = not current_value
+	
 		

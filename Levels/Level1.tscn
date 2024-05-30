@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://cx53s6jbu3xc1"]
+[gd_scene load_steps=30 format=3 uid="uid://cx53s6jbu3xc1"]
 
 [ext_resource type="Texture2D" uid="uid://ypor7p0yn76i" path="res://Sprites/LevelMap/Floor.png" id="1_2knli"]
 [ext_resource type="PackedScene" uid="uid://ca2u7m0mn6bqp" path="res://Scenes/game_manager.tscn" id="1_hycdv"]
@@ -16,8 +16,10 @@
 [ext_resource type="PackedScene" uid="uid://dwvpotm6shelv" path="res://Scenes/Key.tscn" id="15_sfqe0"]
 [ext_resource type="PackedScene" uid="uid://25d0mg1aejpi" path="res://Scenes/SignBoard.tscn" id="16_hq48m"]
 [ext_resource type="PackedScene" uid="uid://dyj2b5tp557rb" path="res://Scenes/Danger_Sprite.tscn" id="18_k3idv"]
+[ext_resource type="PackedScene" uid="uid://bor8hdvhmyhms" path="res://PauseMenu.tscn" id="19_0u01k"]
 [ext_resource type="PackedScene" uid="uid://bgcdhi4ooexqc" path="res://Scenes/CheckpointFlag.tscn" id="19_1paqy"]
 [ext_resource type="Texture2D" uid="uid://c6nnym1ew7dmp" path="res://Sprites/Prompts/Cntrl Sneak Prompt.png" id="20_2l80j"]
+[ext_resource type="Script" path="res://Script/PauseMenu.gd" id="20_euohg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qmsjg"]
 texture = ExtResource("1_2knli")
@@ -283,5 +285,15 @@ shape = SubResource("RectangleShape2D_40hv0")
 [node name="SignBoard" parent="." instance=ExtResource("16_hq48m")]
 position = Vector2(-543, 448)
 labelText = "Avoid Falling to|Death and Spikes"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("19_0u01k")]
+process_mode = 3
+offset_left = -1.0
+offset_top = -10.0
+offset_right = -1.0
+offset_bottom = -10.0
+script = ExtResource("20_euohg")
 
 [connection signal="animation_finished" from="MovingDoor/AnimationPlayer" to="MovingDoor" method="_on_animation_player_animation_finished"]
