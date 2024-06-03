@@ -6,7 +6,7 @@ func _ready():
 
 func _on_body_entered(_body):
 	control.visible = true
-	GameManager.update_spawn(self.global_position)
+	emit_signal("checkpoint_activated", global_position)
 
 func _on_body_exited(_body):
 	control.visible = false

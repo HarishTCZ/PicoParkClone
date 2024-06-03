@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://dkogljqg5gntg"]
+[gd_scene load_steps=19 format=3 uid="uid://dkogljqg5gntg"]
 
 [ext_resource type="PackedScene" uid="uid://ca2u7m0mn6bqp" path="res://Scenes/game_manager.tscn" id="1_2edkd"]
 [ext_resource type="Texture2D" uid="uid://ypor7p0yn76i" path="res://Sprites/LevelMap/Floor.png" id="1_ehn1l"]
@@ -7,7 +7,6 @@
 [ext_resource type="PackedScene" uid="uid://wglpdui772md" path="res://Scenes/Killzone.tscn" id="7_doxhn"]
 [ext_resource type="PackedScene" uid="uid://bama08mi4avx8" path="res://Scenes/PlatformFinal.tscn" id="7_nf5bn"]
 [ext_resource type="PackedScene" uid="uid://vu6nvk815vn7" path="res://Scenes/Coin.tscn" id="8_qcmct"]
-[ext_resource type="PackedScene" uid="uid://bor8hdvhmyhms" path="res://PauseMenu.tscn" id="10_ejejv"]
 [ext_resource type="PackedScene" uid="uid://dwvpotm6shelv" path="res://Scenes/Key.tscn" id="10_l3kcv"]
 [ext_resource type="PackedScene" uid="uid://25d0mg1aejpi" path="res://Scenes/SignBoard.tscn" id="11_2h6vw"]
 
@@ -248,9 +247,3 @@ labelText = "Dont Die"
 [node name="SignBoard2" parent="." instance=ExtResource("11_2h6vw")]
 position = Vector2(1376, 512)
 labelText = "Wait for the|Platform "
-
-[node name="PauseMenu" parent="." instance=ExtResource("10_ejejv")]
-offset_left = 581.0
-offset_top = 319.0
-offset_right = 581.0
-offset_bottom = 319.0

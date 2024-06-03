@@ -34,10 +34,10 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -16.0
-offset_top = 23.0
-offset_right = -16.0
-offset_bottom = 23.0
+offset_left = -7.0
+offset_top = -1.0
+offset_right = -7.0
+offset_bottom = -1.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -65,6 +65,22 @@ theme_override_colors/font_color = Color(1, 0.521569, 0.301961, 1)
 theme_override_fonts/font = ExtResource("2_m010h")
 theme_override_font_sizes/font_size = 48
 text = "Play"
+
+[node name="Multiplayer" type="TextureButton" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("2_5ht2w")
+texture_hover = ExtResource("3_l0twj")
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Multiplayer"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 13.0
+offset_right = 180.0
+offset_bottom = 45.0
+theme_override_colors/font_color = Color(1, 0.521569, 0.301961, 1)
+theme_override_fonts/font = ExtResource("2_m010h")
+theme_override_font_sizes/font_size = 30
+text = "Multiplayer"
 
 [node name="Options" type="TextureButton" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
@@ -110,10 +126,10 @@ anchor_left = 0.00347222
 anchor_top = -0.0493827
 anchor_right = 0.00347222
 anchor_bottom = -0.0493827
-offset_left = 360.0
-offset_top = 158.0
-offset_right = 768.0
-offset_bottom = 254.0
+offset_left = 356.0
+offset_top = 125.0
+offset_right = 764.0
+offset_bottom = 221.0
 theme_override_colors/font_color = Color(1, 0.521569, 0.301961, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_m010h")
@@ -122,5 +138,6 @@ text = "Pico Park
 "
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Multiplayer" to="." method="_on_multiplayer_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Options" to="." method="_on_options_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]

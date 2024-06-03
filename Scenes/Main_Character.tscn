@@ -18,6 +18,8 @@ const pushforce = 50.0
 @onready var body = $Body
 var dead = false
 var pushblock = false
+var checkpoint_position = Vector2()
+var is_checkpoint_set = false
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting(\"physics/2d/default_gravity\")
@@ -76,7 +78,18 @@ func death():
 	dead = true
 	SPEED = 0
 	JUMP_VELOCITY = 0
+	_respawn_at_checkpoint()
 	
+func _set_checkpoint(position):
+	checkpoint_position = position
+	is_checkpoint_set = true
+	
+func _respawn_at_checkpoint():
+	if is_checkpoint_set:
+		global_position = checkpoint_position
+	else:
+		# Default respawn behavior if no checkpoint is set
+		global_position = initial_spawn_position
 "
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ysqfa"]
