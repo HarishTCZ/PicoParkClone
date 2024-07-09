@@ -9,8 +9,6 @@ func _on_body_entered(body):
 		print("You Ded")
 		character.death()
 		timer.start() #starts timer
-	
 
 func _on_timer_timeout(): #when timer finishes
 	get_tree().reload_current_scene()
-	

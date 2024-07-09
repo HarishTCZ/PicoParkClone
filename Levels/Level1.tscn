@@ -243,7 +243,7 @@ position = Vector2(950, 546)
 position = Vector2(4905, 769)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="KillZones/Killzone"]
-position = Vector2(603, -3)
+position = Vector2(332, -6)
 scale = Vector2(10.005, 10.005)
 shape = SubResource("SegmentShape2D_vluaw")
 

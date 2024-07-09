@@ -78,18 +78,12 @@ func death():
 	dead = true
 	SPEED = 0
 	JUMP_VELOCITY = 0
-	_respawn_at_checkpoint()
+
 	
 func _set_checkpoint(position):
 	checkpoint_position = position
 	is_checkpoint_set = true
 	
-func _respawn_at_checkpoint():
-	if is_checkpoint_set:
-		global_position = checkpoint_position
-	else:
-		# Default respawn behavior if no checkpoint is set
-		global_position = initial_spawn_position
 "
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ysqfa"]
